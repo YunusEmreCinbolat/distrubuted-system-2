@@ -1,0 +1,15 @@
+# MPI ve OpenMP Performans Karşılaştırması
+
+## Test Ortamı
+- **İşlemci:** 8 Çekirdekli
+- **Docker Konteynerleri:** 3 düğüm (1 master, 2 worker)
+
+## Sonuçlar
+| Yöntem  | Süre (saniye) |
+|---------|--------------|
+| MPI     | 2.3          |
+| OpenMP  | 1.2          |
+
+### Analiz
+- OpenMP, tek bir düğüm içinde çok çekirdek kullanarak daha hızlıdır.
+- MPI, çok düğümlü hesaplamalar için uygundur ancak iletişim maliyeti vardır.

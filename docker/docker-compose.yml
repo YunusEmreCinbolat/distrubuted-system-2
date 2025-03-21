@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  master:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: master_node
+    networks:
+      - mpi_network
+    command: ["mpirun", "-np", "4", "-hosts", "worker1,worker2", "/app/mpi_program"]
+
+  worker1:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: worker1
+    networks:
+      - mpi_network
+
+  worker2:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: worker2
+    networks:
+      - mpi_network
+
+networks:
+  mpi_network:
+    driver: bridge
