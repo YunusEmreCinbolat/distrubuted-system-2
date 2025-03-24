@@ -25,3 +25,6 @@ Bu proje, MPI ve OpenMP kullanarak dağıtık bir sistemde veri işleme yapmakta
 docker-compose up --build
 docker run --rm master_node /app/openmp_program
 ```
+
+# Uygulama Videosu Linki Aşağıdadır:
+https://drive.google.com/file/d/1I8zoUN4ifyKlTIhHiwp4I_SZuuu7_Tbj/view?usp=drive_link
